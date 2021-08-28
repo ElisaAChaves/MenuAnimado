@@ -1,0 +1,67 @@
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #484D6D;
+  padding: 0 20px;
+}
+.box{
+  display: flex;
+  align-items: center;
+  background: #F1F4F8;
+  /* box-shadow: 0 5px 10px rgba(0,0,0,0.2); */
+  padding: 20px 15px;
+  border-radius: 12px;
+  /* transform: scale(1.5); */
+}
+.box .icon{
+  position: relative;
+  height: 65px;
+  width: 65px;
+  border: 1px solid rgba(23,22,33, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+.box .icon.active{
+  background: #484D6D;
+}
+.box .icon.line.active{
+  background: #F1F4F8;
+}
+.icon i{
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+  color: #2D253A;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.icon.active i{
+  color: #F1F4F8;
+}
+.icon.line.active i{
+  color: #2D253A;
+}
+ .icon i.close{
+  opacity: 0;
+}
+ .icon.active i.close{
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+ .icon.active i.open{
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+ .icon.line.active i.close{
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+ .icon.line.active i.open{
+  transform: translate(-50%, -50%) rotate(0deg);
+}

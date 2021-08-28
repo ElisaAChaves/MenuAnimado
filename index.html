@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="box">
+            <div class="icon">
+                <i class='bx bx-down-arrow-circle open'></i>
+                <i class='bx bxs-down-arrow-circle close' ></i>
+            </div>
+            <div class="icon line">
+                <i class='bx bx-up-arrow-circle open' ></i>
+                <i class='bx bxs-up-arrow-circle close' ></i>
+            </div>
+            <div class="icon">
+                <i class='bx bx-right-arrow-circle open' ></i>
+                <i class='bx bx-right-arrow-circle close' ></i>
+            </div>
+            <div class="icon line">
+                <i class='bx bx-left-arrow-circle open' ></i>
+                <i class='bx bxs-left-arrow-circle close' ></i>
+            </div>
+            <div class="icon">
+                <i class='bx bx-right-top-arrow-circle open' ></i>
+                <i class='bx bxs-right-top-arrow-circle close' ></i>
+            </div>
+        </div>
+        
+        <script>
+        let menuBtn = document.querySelectorAll(".icon");
+        for (var i = 0; i < menuBtn.length; i++) {
+        menuBtn[i].addEventListener("click",(e)=>{
+            console.log(e.target);
+        e.target.classList.toggle("active");
+        });
+        }
+        </script>
+    </body>
+</html>
+    
